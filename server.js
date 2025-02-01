@@ -1,5 +1,6 @@
 const express = require("express");
 const next = require("next");
+
 const dev = process.env.NODE_ENV !== "production";
 const app = next({ dev });
 const handle = app.getRequestHandler();
@@ -14,7 +15,7 @@ app.prepare().then(() => {
 
 	// Custom route for a page
 	server.get("/about", (req, res) => {
-		return app.render(req, res, "about/page.tsx");
+		return app.render(req, res, "/about", req.query);
 	});
 
 	// Handle all other routes with Next.js
