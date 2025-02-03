@@ -6,7 +6,7 @@ export default function About2Page() {
 	const [data, setData] = useState(null);
 
 	async function fetchData() {
-		const res = await fetch("http://localhost:3000/api/home");
+		const res = await fetch("/api/home");
 		const result = await res.json();
 		console.log(result);
 		setData(result);
@@ -14,7 +14,7 @@ export default function About2Page() {
 
 	useEffect(() => {
 		fetchData();
-	});
+	}, []);
 
 	if (!data) {
 		return <div>Loading...</div>;
