@@ -1,5 +1,8 @@
-const express = require("express");
-const next = require("next");
+// const express = require("express");
+// const next = require("next");
+
+import express from "express";
+import next from "next";
 
 const dev = process.env.NODE_ENV !== "production";
 const app = next({ dev });
@@ -14,8 +17,22 @@ app.prepare().then(() => {
 	});
 
 	// Custom route for a page
+	// render next page
 	server.get("/about", (req, res) => {
-		return app.render(req, res, "/about", req.query);
+		const data = {
+			title: "Custom Page",
+			content: "This is a custom page rendered with Express",
+		};
+		app.render(req, res, "/about", data);
+	});
+
+	// using API based
+	server.get("/api/data", (req, res) => {
+		const data = {
+			title: "Application",
+			content: "Samad Ghanbari",
+		};
+		res.json(data);
 	});
 
 	// Handle all other routes with Next.js
@@ -23,8 +40,8 @@ app.prepare().then(() => {
 		return handle(req, res);
 	});
 
-	server.listen(80, (err) => {
+	server.listen(3000, (err) => {
 		if (err) throw err;
-		console.log("> Ready on http://localhost:80");
+		console.log("> Ready on http://localhost:3000");
 	});
 });

@@ -1,16 +1,16 @@
-import { Metadata } from 'next';
+import React from "react";
 
-export const metadata: Metadata = {
-  title: 'About',
-  description: 'Network and Computer',
-};
+export default async function CustomPage(data: {
+	searchParams: PromiseLike<{ title: string; content: string }>;
+}) {
+	const { title, content } = await data.searchParams;
 
-export default function Page() {
-  return (
-    <>
-    <h1>
-    	About Page 
-    </h1>
-    </>
-  );
+	return (
+		<div>
+			<h1>{title}</h1>
+			<p>{content}</p>
+		</div>
+	);
 }
+
+//export default CustomPage;
