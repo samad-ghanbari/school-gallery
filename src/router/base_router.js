@@ -8,4 +8,8 @@ router.get("/home", (req, res) => {
 	controller.getHome(req, res);
 });
 
+router.get("/about", (req, res) => {
+	controller.getAbout(req, res);
+});
+
 export default router;
