@@ -1,6 +1,6 @@
 import express from "express";
 import next from "next";
-import baseRouter from "./router/base_router.js";
+import apiRouter from "./routers/api_router.js";
 
 const dev = process.env.NODE_ENV !== "production";
 const app = next({ dev });
@@ -9,7 +9,7 @@ const handle = app.getRequestHandler();
 app.prepare().then(() => {
 	const server = express();
 
-	server.use("/api", baseRouter);
+	server.use("/api", apiRouter);
 
 	// Handle with Next.js
 	server.get("*", (req, res) => {

@@ -1,0 +1,128 @@
+aos : animate on scroll
+npm install aos
+
+src/utils/aos/index.tsx
+	'use client';
+
+	import { useEffect } from 'react';
+	import AOS from 'aos';
+	import 'aos/dist/aos.css';
+
+	export function AOSInit() {
+	  useEffect(() => {
+	    AOS.init({
+	      duration: 1000,
+	      offset: 0,
+	      once: true,
+	    });
+	  }, []);
+	  return null;
+	}
+
+
+layout.tsx
+	import { AOSInit } from '@/src/utils/aos';
+	
+	<html lang="en" >
+        <AOSInit />
+	<body>
+	...
+
+------------------------------------
+
+shadcn
+	class names
+    		<div className={cn('base-class', isActive && 'active-class')}>
+    		'active-class' is included only if isActive is true.
+    		
+npm install shadcn
+
+------------------------------------
+
+class flexibility
+
+clsx
+
+clsx is a tiny utility for constructing className strings conditionally in JavaScript, 
+
+
+npm install clsx
+
+	const className = clsx({
+	  'foo': true,
+	  'bar': false,
+	  'baz': isTrue(),
+	});
+	// Result: 'foo baz'
+
+
+-------------------------------------
+
+
+npm i sonner
+Sonner is an opinionated toast component for React. 
+-------------------------------------
+
+npm i tailwind-merge
+
+
+Utility function to efficiently merge Tailwind CSS classes in JS without style conflicts.
+
+import { twMerge } from 'tailwind-merge'
+
+twMerge('px-2 py-1 bg-red hover:bg-dark-red', 'p-3 bg-[#B91C1C]')
+// → 'hover:bg-dark-red p-3 bg-[#B91C1C]'
+
+
+---------------------------------------
+
+npm i next-themes
+
+
+----------------------------------------
+
+npm i react-icons
+
+----------------------------------------
+
+npm i lucide-react
+
+-----------------------------------------
+
+npm i react-transition-group
+
+
+----------------------------------------
+
+radix-ui/react-slot
+
+import { Slot } from '@radix-ui/react-slot';
+
+function Button({ asChild, ...props }) {
+  const Comp = asChild ? Slot : 'button';
+  return <Comp {...props} />;
+}
+
+// Usage
+<Button asChild>
+  <a href="/contact">Contact</a>
+</Button>
+
+
+---------------------------------------
+
+npm i @radix-ui/react-accordion
+
+----------------------------------------
+npm i @radix-ui/react-scroll-area
+
+----------------------------------------
+npm i @radix-ui/react-dialog
+
+---------------------------------------
+
+npm i class-variance-authority
+
+--------------------------------------
+
+s

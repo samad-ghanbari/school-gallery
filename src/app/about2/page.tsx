@@ -7,7 +7,7 @@ export default function About2Page() {
 
 	useEffect(() => {
 		async function fetchData() {
-			const res = await fetch("/api/data");
+			const res = await fetch("/api/about");
 			const result = await res.json();
 			setData(result);
 		}

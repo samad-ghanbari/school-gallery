@@ -1,31 +1,21 @@
-"use client";
+import React from "react";
 
-import React, { useEffect, useState } from "react";
+import { Footer } from "@/src/layout/footer/index";
+import { MainHeader } from "@/src/layout/header/index";
+import { Metadata } from "next";
 
-export default function About2Page() {
-	const [data, setData] = useState(null);
+export const metadata: Metadata = {
+	title: "School gallery | Home",
+};
 
-	async function fetchData() {
-		const res = await fetch("/api/home");
-		const result = await res.json();
-		console.log(result);
-		setData(result);
-	}
-
-	useEffect(() => {
-		fetchData();
-	}, []);
-
-	if (!data) {
-		return <div>Loading...</div>;
-	}
-
-	const { name, lastname } = data;
-
+export default function Home() {
 	return (
-		<div>
-			<h1>{name}</h1>
-			<p>{lastname}</p>
-		</div>
+		<>
+			<MainHeader />
+			<div className="w-full h-screen pt-20 bg-red-300">
+				<h1> Home Page</h1>
+			</div>
+			<Footer />
+		</>
 	);
 }

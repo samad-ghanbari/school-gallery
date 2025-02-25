@@ -22,7 +22,7 @@
 			}
 		],
 		"paths": {
-			"@/*": ["./src/*"]
+			"@/*": ["./*"]
 		}
 	},
 	"include": [
@@ -31,8 +31,8 @@
 		"**/*.tsx",
 		".next/types/**/*.ts",
 		"server.ts",
-		"src/router/base_router.js",
-		"src/controller/base_controller.js",
+		"src/routers/api_router.js",
+		"src/controllers/api_controller.js",
 		"src/server.js"
 	],
 	"exclude": ["node_modules"]
