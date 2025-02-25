@@ -25,7 +25,7 @@ export function Header() {
 
 	return (
 		<header
-			style={{ direction: "rtl" }}
+			style={{ direction: "ltr" }}
 			className={cn(
 				"left-0 right-0 top-0 z-99 mx-auto hidden w-full py-[26px] lg:block",
 				"font-primary",

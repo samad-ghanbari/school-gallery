@@ -3,74 +3,48 @@ import { FooterSectionProps } from "@/src/layout/footer/";
 
 export const footerSectionData: FooterSectionProps = {
 	about: {
-		description:
-			"ارائه دهنده راهکارهای شبکه و سیستم‌های مخابراتی و تامین تجهیزات",
+		description: "Students Artistic Photo",
 		socialLinks: [],
 	},
 	columnOne: {
-		title: "مشاوره در طراحی شبکه",
+		title: "Photography",
 		links: [
 			{
-				label: "مشاوره و طراحی شبکه‌های سرویس پروایدر",
+				label: "School Yard",
 				href: "/",
 				openNewTab: false,
 			},
 			{
-				label: "مشاوره و طراحی شبکه‌های سازمانی",
-				href: "/",
-				openNewTab: false,
-			},
-			{
-				label: "مشاوره در خرید تجهیزات شبکه",
-				href: "/",
-				openNewTab: false,
-			},
-			{
-				label: "مشاوره در ارائه راهکارهای FTTH",
-				href: "/",
-				openNewTab: false,
-			},
-			{
-				label: "مشاوره در راه‌اندازی سامانه‌های سازمانی",
+				label: "School Field",
 				href: "/",
 				openNewTab: false,
 			},
 		],
 	},
 	columnTwo: {
-		title: "تامین تجهیزات و آموزش",
+		title: "",
 		links: [
 			{
-				label: "تامین تجهیزات سیستم‌های مخابراتی",
+				label: "School Library",
 				href: "/",
 				openNewTab: false,
 			},
 			{
-				label: "تامین تجهیزات شبکه",
-				href: "/",
-				openNewTab: false,
-			},
-			{
-				label: "آموزش راه‌اندازی سرویس‌های شبکه",
-				href: "/",
-				openNewTab: false,
-			},
-			{
-				label: "آموزش راه‌اندازی FTTH",
+				label: "Studying Time",
 				href: "/",
 				openNewTab: false,
 			},
 		],
 	},
 	columnThree: {
-		title: "آدرس",
-		location: "تهران، میدان ونک خیابان ملاصدرا",
+		title: "Address",
+		location: "Dubai",
 		mails: ["info@gallery.ir"],
-		phoneNumbers: ["021-88...", "021-88..."],
+		phoneNumbers: ["..."],
 	},
 
 	footerBottom: {
-		copyrightText: "© SchoolGallery  2024 | All Rights Reserved",
+		copyrightText: "© SchoolGallery  2025 | All Rights Reserved",
 		links: [],
 	},
 };

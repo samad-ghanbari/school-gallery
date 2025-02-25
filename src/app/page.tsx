@@ -12,7 +12,7 @@ export default function Home() {
 	return (
 		<>
 			<MainHeader />
-			<div className="w-full h-screen pt-20 bg-red-300">
+			<div className="w-full h-screen pt-20 bg-[#fffafa]">
 				<h1> Home Page</h1>
 			</div>
 			<Footer />
