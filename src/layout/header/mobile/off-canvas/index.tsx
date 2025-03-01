@@ -12,7 +12,7 @@ import { FaEnvelope, FaPhone } from "react-icons/fa6";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { CustomLink } from "@/src/components/custom-link";
 import { X } from "lucide-react";
-import { HeaderProps } from "../../desktop/v1";
+import { HeaderProps } from "../../desktop/";
 import { Navigation } from "../navigation";
 import { MdMenu } from "react-icons/md";
 // import {
@@ -55,9 +55,9 @@ interface IOffCanvas {
 
 const offCanvasProps: IOffCanvas = {
 	contactInfo: {
-		location: " تهران، میدان ونک خیابان ملاصدرا",
-		phoneNumber: "021-8805",
-		mail: "info@tcmart.ir",
+		location: "Dubai",
+		phoneNumber: "+971 - ",
+		mail: "info@school-gallery.com",
 	},
 	socialLinks: [
 		// {
@@ -128,9 +128,9 @@ export function OffCanvas({ menuItems }: Pick<HeaderProps, "menuItems">) {
 						<Navigation menuItems={menuItems} />
 
 						{/* Contact info  */}
-						<div className="px-5 text-right">
+						<div className="px-5 text-left text-blue-600">
 							<h3 className={mainTitleClasses}>
-								تماس با ما
+								Contact
 							</h3>
 							<ul
 								aria-label="addresses"

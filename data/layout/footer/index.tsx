@@ -40,7 +40,7 @@ export const footerSectionData: FooterSectionProps = {
 		title: "Address",
 		location: "Dubai",
 		mails: ["info@gallery.ir"],
-		phoneNumbers: ["..."],
+		phoneNumbers: ["+971-"],
 	},
 
 	footerBottom: {
